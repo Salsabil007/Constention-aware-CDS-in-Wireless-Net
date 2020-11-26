@@ -1,0 +1,5 @@
+ for {set i 0} {$i < $num_nodes} {incr i} {
+     set a($i) [new Agent/MessagePassing/Flooding]
+     $node_($i) attach  $a($i) $MESSAGE_PORT
+     $a($i) set messages_seen {}
+ }
